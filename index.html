@@ -27,6 +27,177 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Additional Custom CSS -->
+  <style>
+    /* Hero Section Styles */
+    .hero {
+      background-color: #f8fbff;
+      padding: 120px 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      opacity: 0.1;
+    }
+
+    .hero h2 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: #0c2340;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #4c5667;
+      margin-bottom: 30px;
+    }
+
+    .form-search {
+      max-width: 500px;
+      margin-bottom: 30px;
+    }
+
+    .form-search .form-control {
+      height: 54px;
+      border-radius: 30px 0 0 30px;
+      border: 1px solid #ddd;
+      padding: 0 24px;
+    }
+
+    .form-search button {
+      border-radius: 0 30px 30px 0;
+      padding: 10px 30px;
+      background: #0c5460;
+      border: none;
+    }
+
+    .stats-item {
+      padding: 15px 10px;
+    }
+
+    .stats-item .purecounter {
+      font-size: 32px;
+      font-weight: 700;
+      color: #0c5460;
+    }
+
+    .stats-item p {
+      font-size: 14px;
+      margin: 0;
+    }
+
+    .hero-img {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-img .play-btn {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .play-btn:before {
+      content: "";
+      width: 0;
+      height: 0;
+      border-top: 15px solid transparent;
+      border-bottom: 15px solid transparent;
+      border-left: 25px solid #0c5460;
+      margin-left: 5px;
+    }
+
+    /* Partner Logo Section */
+    .partner-logos {
+      padding: 60px 0;
+      background-color: #fff;
+    }
+
+    .partner-logos h3 {
+      font-size: 1.2rem;
+      text-align: center;
+      color: #666;
+      margin-bottom: 40px;
+    }
+
+    .partner-logo {
+      text-align: center;
+      filter: grayscale(100%);
+      opacity: 0.6;
+      transition: all 0.3s ease;
+    }
+
+    .partner-logo:hover {
+      filter: grayscale(0);
+      opacity: 1;
+    }
+
+    /* Services Section */
+    .services-section {
+      padding: 80px 0;
+      background-color: #f8f9fa;
+    }
+
+    .services-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .services-title h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #0c2340;
+    }
+
+    .services-title p {
+      font-size: 1.1rem;
+      color: #666;
+    }
+
+    .service-card {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 30px;
+      transition: all 0.3s ease;
+      height: 100%;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+    }
+
+    .service-card .icon {
+      font-size: 48px;
+      color: #0c5460;
+      margin-bottom: 20px;
+    }
+
+    .service-card h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: #0c2340;
+    }
+
+    .service-card p {
+      color: #666;
+    }
+  </style>
 </head>
 
 <body class="index-page">
@@ -45,8 +216,8 @@
           <li><a href="index.html" class="active">Home<br></a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="services.html">Products</a></li>
-          <li><a href="pricing.html">Our Trading Legacy</a></li>
-          <li class="dropdown"><a href="#"><span>Trade & Logistics</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li><a href="pricing.html">Our Trading History</a></li>
+          <!-- <li class="dropdown"><a href="#"><span>Trade & Logistics</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="#">Supply Chain</a></li>
               <li class="dropdown"><a href="#"><span>Regions</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
@@ -61,7 +232,7 @@
               <li><a href="#">Logistics Network</a></li>
               <li><a href="#">Trade Regulations</a></li>
             </ul>
-          </li>
+          </li> -->
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -75,63 +246,159 @@
   <main class="main">
 
     <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
-
-      <img src="assets/img/world-dotted-map.png" alt="" class="hero-bg" data-aos="fade-in">
-
+    <section id="hero" class="hero section">
       <div class="container">
         <div class="row gy-4 d-flex justify-content-between">
           <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
-            <h2 data-aos="fade-up">Your Trusted Trading Partner Since 2013</h2>
-            <p data-aos="fade-up" data-aos-delay="100">Bridging Dubai to South Sudan & Kenya with quality agricultural imports and expert trade solutions. We deliver excellence in both dry and perishable agricultural products, backed by a decade of international trade experience.</p>
+            <h2 data-aos="fade-up">We focus on growing your agricultural business</h2>
+            <p data-aos="fade-up" data-aos-delay="100">Bridging Dubai to South Sudan & Kenya with premium agricultural imports and expert trade solutions. Our decade of international trade experience ensures quality, reliability, and seamless logistics for all your agricultural needs.</p>
 
             <form action="#" class="form-search d-flex align-items-stretch mb-3" data-aos="fade-up" data-aos-delay="200">
-              <input type="text" class="form-control" placeholder="Search for products or trade solutions">
-              <button type="submit" class="btn btn-primary">Search</button>
+              <input type="email" class="form-control" placeholder="Enter your email for product information">
+              <button type="submit" class="btn btn-primary">Contact Us</button>
             </form>
 
             <div class="row gy-4" data-aos="fade-up" data-aos-delay="300">
-
               <div class="col-lg-3 col-6">
                 <div class="stats-item text-center w-100 h-100">
-                  <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="0" class="purecounter">10</span>
+                  <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="1" class="purecounter">10</span>
                   <p>Years Experience</p>
                 </div>
-              </div><!-- End Stats Item -->
+              </div>
 
               <div class="col-lg-3 col-6">
                 <div class="stats-item text-center w-100 h-100">
-                  <span data-purecounter-start="0" data-purecounter-end="2" data-purecounter-duration="0" class="purecounter">2</span>
+                  <span data-purecounter-start="0" data-purecounter-end="2" data-purecounter-duration="1" class="purecounter">2</span>
                   <p>Key Markets</p>
                 </div>
-              </div><!-- End Stats Item -->
+              </div>
 
               <div class="col-lg-3 col-6">
                 <div class="stats-item text-center w-100 h-100">
-                  <span data-purecounter-start="0" data-purecounter-end="100" data-purecounter-duration="0" class="purecounter">100</span>
+                  <span data-purecounter-start="0" data-purecounter-end="100" data-purecounter-duration="1" class="purecounter">100+</span>
                   <p>Agricultural Products</p>
                 </div>
-              </div><!-- End Stats Item -->
+              </div>
 
               <div class="col-lg-3 col-6">
                 <div class="stats-item text-center w-100 h-100">
-                  <span data-purecounter-start="0" data-purecounter-end="200" data-purecounter-duration="0" class="purecounter">200</span>
+                  <span data-purecounter-start="0" data-purecounter-end="200" data-purecounter-duration="1" class="purecounter">200+</span>
                   <p>Global Partners</p>
                 </div>
-              </div><!-- End Stats Item -->
-
+              </div>
             </div>
-
           </div>
 
           <div class="col-lg-5 order-1 order-lg-2 hero-img" data-aos="zoom-out">
             <img src="assets/img/hero-img.svg" class="img-fluid mb-3 mb-lg-0" alt="Agricultural trade and logistics illustration">
+            <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox play-btn"></a>
           </div>
-
         </div>
       </div>
-
     </section><!-- /Hero Section -->
+
+    <!-- Partner Logos Section -->
+    <section class="partner-logos">
+      <div class="container">
+        <h3 data-aos="fade-up">From start-ups to Fortune 500, we partner with brands of all sizes</h3>
+        <div class="row justify-content-center align-items-center">
+          <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="partner-logo">
+              <img src="assets/img/clients/client-1.png" class="img-fluid" alt="Partner Logo">
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="partner-logo">
+              <img src="assets/img/clients/client-2.png" class="img-fluid" alt="Partner Logo">
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="partner-logo">
+              <img src="assets/img/clients/client-3.png" class="img-fluid" alt="Partner Logo">
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="partner-logo">
+              <img src="assets/img/clients/client-4.png" class="img-fluid" alt="Partner Logo">
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="partner-logo">
+              <img src="assets/img/clients/client-5.png" class="img-fluid" alt="Partner Logo">
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="partner-logo">
+              <img src="assets/img/clients/client-6.png" class="img-fluid" alt="Partner Logo">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- /Partner Logos Section -->
+
+    <!-- Main Services Section -->
+    <section class="services-section">
+      <div class="container">
+        <div class="services-title" data-aos="fade-up">
+          <h2>All the agricultural services that are convenient for you</h2>
+          <p>Comprehensive import and logistics solutions tailored to your needs</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-card d-flex flex-column h-100">
+              <div class="icon">
+                <i class="bi bi-flower1"></i>
+              </div>
+              <h3>Agricultural Imports</h3>
+              <p>Premium dry goods including grains, pulses, nuts, and spices sourced directly from trusted farms in South Sudan and Kenya. Our rigorous quality controls ensure you receive only the best products for your business.</p>
+              <div class="mt-auto">
+                <a href="services.html" class="btn btn-outline-primary mt-3">Find out more <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-card d-flex flex-column h-100">
+              <div class="icon">
+                <i class="bi bi-truck"></i>
+              </div>
+              <h3>Trade & Logistics Solutions</h3>
+              <p>End-to-end logistics services including transportation, customs clearance, documentation, and tracking for efficient movement of goods across borders. Our decade of expertise ensures seamless operations.</p>
+              <div class="mt-auto">
+                <a href="#" class="btn btn-outline-primary mt-3">Find out more <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-card d-flex flex-column h-100">
+              <div class="icon">
+                <i class="bi bi-moisture"></i>
+              </div>
+              <h3>Fresh Produce & Perishables</h3>
+              <p>Fresh fruits, vegetables, dairy, and meat products delivered with exceptional care and sophisticated cold chain logistics for maximum freshness. We specialize in preserving quality from source to destination.</p>
+              <div class="mt-auto">
+                <a href="#" class="btn btn-outline-primary mt-3">Find out more <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-card d-flex flex-column h-100">
+              <div class="icon">
+                <i class="bi bi-shield-check"></i>
+              </div>
+              <h3>Quality Assurance & Compliance</h3>
+              <p>Comprehensive quality control processes throughout the supply chain, ensuring all agricultural products meet international standards and regulatory requirements for food safety and quality.</p>
+              <div class="mt-auto">
+                <a href="#" class="btn btn-outline-primary mt-3">Find out more <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- /Main Services Section -->
 
     <!-- Featured Services Section -->
     <section id="featured-services" class="featured-services section">
@@ -552,9 +819,7 @@
                 </p>
               </div>
             </div><!-- End testimonial item -->
-            Here's the remaining part of the index.html file to complete it:
 
-```html
             <div class="swiper-slide">
               <div class="testimonial-item">
                 <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
