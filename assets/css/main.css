@@ -940,7 +940,8 @@ section,
   color: var(--contrast-color);
   background-color: var(--accent-color);
   flex-shrink: 0;
-  padding: 0 25px;
+  padding: 12px 25px; /* Adjust padding as needed */
+  border-radius: 50px; /* Rounds the edges */
 }
 
 .hero form .btn-primary:hover {
